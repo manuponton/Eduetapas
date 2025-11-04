@@ -167,12 +167,75 @@
 }
 
 @media (max-width: 575.98px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .navbar-brand {
+        align-items: center;
+    }
+
+    .navbar-brand .brand-icon-wrapper {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    .navbar-brand .brand-title {
+        font-size: 1.1rem;
+        line-height: 1.1;
+    }
+
+    .navbar-brand .brand-subtitle {
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+    }
+
+    .hero {
+        padding: 5em 0 3em;
+    }
+
     .hero-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        line-height: 1.35;
     }
 
     .hero-description {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons .custom-btn {
+        font-size: 1rem;
+    }
+
+    .section-padding {
+        padding: 4.5em 0;
+    }
+
+    .section-padding-half {
+        padding: 3em 0;
+    }
+
+    .custom-btn {
+        white-space: normal;
+        line-height: 1.4;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    .contact-form .custom-btn,
+    #subscription-form .custom-btn,
+    .hero-buttons .custom-btn {
+        width: 100%;
+        text-align: center;
     }
 }
 
