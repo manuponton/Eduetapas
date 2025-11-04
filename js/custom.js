@@ -27,34 +27,41 @@
     });  
 
 
-    // PROJECT CAROUSEL
-    var projectCarousels = $(".project-carousel");
-    projectCarousels.each(function(){
-      $(this).owlCarousel({
-        loop: true,
-        margin: 30,
-        nav: false,
-        dots: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        smartSpeed: 800,
-        dotsClass: 'owl-dots custom-dots',
-        responsive:{
-            0:{
-                items: 1,
-                margin: 15
-            },
-            768:{
-                items: 2,
-                margin: 20
-            },
-            992:{
-                items: 3,
-                margin: 30
-            }
-        }
-      });
+    // PROJECT CAROUSELS
+    // Detailed: show up to 3 cards on desktop
+    $(".project-carousel-detailed").owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      dotsClass: 'owl-dots custom-dots',
+      responsive:{
+          0:{ items: 1, margin: 15 },
+          768:{ items: 2, margin: 20 },
+          992:{ items: 2, margin: 30 }
+      }
+    });
+
+    // Overview: keep multiple items on larger screens
+    $(".project-carousel-overview").owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplayHoverPause: true,
+      smartSpeed: 800,
+      dotsClass: 'owl-dots custom-dots',
+      responsive:{
+          0:{ items: 1, margin: 15 },
+          768:{ items: 2, margin: 20 },
+          992:{ items: 3, margin: 30 }
+      }
     });
   });
 

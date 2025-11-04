@@ -19,7 +19,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    width: min(100%, 560px);
+    /* Not too wide; fits 3-up layout */
+    width: min(100%, 680px);
     flex: 1 1 0;
     margin: 0 auto;
 }
@@ -47,44 +48,37 @@
 }
 
 .project-carousel-detailed .project-content {
-    padding: 2.5rem;
+    padding: clamp(2rem, 2.8vw, 2.75rem);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    gap: clamp(1.25rem, 2vw, 1.75rem);
     background: #ffffff;
 }
 
-.project-carousel-detailed .project-tags {
+.project-carousel-detailed .project-meta {
     display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
-.project-carousel-detailed .tag {
+.project-carousel-detailed .meta-item {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    padding: 0.5rem 1.25rem;
+    border-radius: 999px;
+    background: #F1F5F9;
+    color: #334155 !important;
     font-size: 0.875rem;
-    font-weight: 500;
-    white-space: nowrap;
+    font-weight: 600;
+    letter-spacing: 0.01em;
 }
 
-.project-carousel-detailed .tag i {
+.project-carousel-detailed .meta-item i {
+    color: var(--primary-color) !important;
     font-size: 0.875rem;
-}
-
-.project-carousel-detailed .tag-age {
-    background: #FFF4E6;
-    color: #FF922B !important;
-}
-
-.project-carousel-detailed .tag-nee {
-    background: #E6FCF5;
-    color: #0CA678 !important;
 }
 
 .project-carousel-detailed .project-header {
@@ -120,46 +114,43 @@
 }
 
 .project-carousel-detailed .project-description {
-    color: #64748B !important;
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-    padding: 0;
-    max-width: 100%;
+    color: #475569 !important;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin: 0;
 }
 
-.project-carousel-detailed .project-features {
+.project-carousel-detailed .project-highlights {
+    list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.1rem;
+    margin: 0;
+    padding: 0;
 }
 
-.project-carousel-detailed .feature {
+.project-carousel-detailed .project-highlights li {
+    background: #F8FAFC;
+    border-radius: 14px;
+    padding: 1.1rem 1.2rem;
     display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    background: #F8F9FA;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+    align-items: flex-start;
+    gap: 0.9rem;
+    min-height: 100px;
+    box-shadow: inset 0 0 0 1px rgba(226, 232, 240, 0.6);
 }
 
-.project-carousel-detailed .feature:hover {
-    transform: translateY(-2px);
-    background: #f0f2f5;
-}
-
-.project-carousel-detailed .feature i {
+.project-carousel-detailed .project-highlights i {
     color: var(--primary-color) !important;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin-top: 0.15rem;
 }
 
-.project-carousel-detailed .feature span {
-    color: #4A5568 !important;
-    font-size: 0.9375rem;
+.project-carousel-detailed .project-highlights span {
+    color: #4B5563 !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
     font-weight: 500;
-    line-height: 1.4;
 }
 
 .project-carousel-detailed .project-link {
