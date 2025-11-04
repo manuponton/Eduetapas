@@ -29,46 +29,32 @@
 
     // PROJECT CAROUSEL
     var projectCarousels = $(".project-carousel");
-    var baseCarouselOptions = {
-      loop: true,
-      margin: 30,
-      dots: true,
-      autoplay: true,
-      autoplayTimeout: 5000,
-      autoplayHoverPause: true,
-      smartSpeed: 800,
-      dotsClass: 'owl-dots custom-dots',
-      responsive: {
-        0: {
-          items: 1,
-          margin: 15
-        },
-        768: {
-          items: 2,
-          margin: 20
-        },
-        1200: {
-          items: 3,
-          margin: 30
-        }
-      }
-    };
-
     projectCarousels.each(function(){
-      var $carousel = $(this);
-      var options = $.extend(true, {}, baseCarouselOptions);
-
-      if ($carousel.hasClass('project-carousel-detailed')) {
-        options.nav = true;
-        options.navText = [
-          '<span aria-label="Anterior"><i class="fa fa-chevron-left"></i></span>',
-          '<span aria-label="Siguiente"><i class="fa fa-chevron-right"></i></span>'
-        ];
-      } else {
-        options.nav = false;
-      }
-
-      $carousel.owlCarousel(options);
+      $(this).owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        smartSpeed: 800,
+        dotsClass: 'owl-dots custom-dots',
+        responsive:{
+            0:{
+                items: 1,
+                margin: 15
+            },
+            768:{
+                items: 2,
+                margin: 20
+            },
+            992:{
+                items: 3,
+                margin: 30
+            }
+        }
+      });
     });
   });
 
