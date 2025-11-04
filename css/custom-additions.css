@@ -89,6 +89,93 @@
     color: var(--white-color);
 }
 
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .hero {
+        padding: 6em 0 4em;
+        min-height: auto;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+        line-height: 1.3;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+    }
+
+    .hero-buttons .custom-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-features .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero-features .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .feature-item {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+    }
+
+    .hero-shape {
+        left: 50%;
+        right: auto;
+        top: -80px;
+        width: 280px;
+        height: 280px;
+        transform: translateX(-50%);
+    }
+
+    .hero-stats {
+        position: static;
+        transform: none;
+        margin-top: 1.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .hero-badge-bottom {
+        position: static;
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+}
+
 /* Navegación por puntos personalizada */
 .owl-dots {
     display: flex;
