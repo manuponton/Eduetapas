@@ -3,9 +3,11 @@
 }
 
 .project-carousel-detailed .project-wrapper {
-    padding: 1.5rem;
-    margin: 0;
+    padding: clamp(0.75rem, 1.5vw, 1.5rem);
+    margin: 0 auto;
     height: 100%;
+    display: flex;
+    align-items: stretch;
 }
 
 .project-carousel-detailed .project-card {
@@ -17,7 +19,9 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: min(100%, 560px);
+    flex: 1 1 0;
+    margin: 0 auto;
 }
 
 .project-carousel-detailed .project-card:hover {
@@ -245,6 +249,10 @@
 @media (max-width: 575.98px) {
     .project-carousel-detailed .project-wrapper {
         padding: 1rem;
+    }
+
+    .project-carousel-detailed .project-card {
+        width: 100%;
     }
 
     .project-carousel-detailed .project-content {
