@@ -1,0 +1,114 @@
+/* Estilos adicionales para mejorar el contraste y la legibilidad */
+
+.project-wrapper {
+    margin: 1rem;
+}
+
+.project-content {
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.project-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.project-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.project-title {
+    color: var(--dark-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    color: var(--gray-color);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.badge {
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    font-weight: 500;
+    margin: 0 0.3rem;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color) !important;
+}
+
+.project-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.project-features span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(var(--primary-color-rgb), 0.05);
+    border-radius: 8px;
+    color: var(--dark-color);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.project-features span:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.project-features i {
+    color: var(--secondary-color);
+}
+
+.project-features span:hover i {
+    color: var(--white-color);
+}
+
+/* Navegación por puntos personalizada */
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.owl-dot {
+    width: 10px;
+    height: 10px;
+    background: var(--gray-color) !important;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+}
+
+.owl-dot.active {
+    width: 20px;
+    border-radius: 5px;
+    background: var(--primary-color) !important;
+    opacity: 1;
+}

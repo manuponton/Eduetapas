@@ -1,0 +1,192 @@
+.project-wrapper {
+    padding: 1.5rem;  /* Increased wrapper padding */
+    max-width: 450px;  /* Added max-width for better text display */
+    margin: 0 auto;   /* Center the cards */
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;      /* Ensure full width */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+}
+
+.project-image {
+    position: relative;
+    height: 220px;    /* Slightly increased height */
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 2rem;    /* Increased padding */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+}
+
+.project-tags {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;  /* Prevent tag text from wrapping */
+}
+
+.tag i {
+    font-size: 0.875rem;
+}
+
+.tag-age {
+    background: #FFF4E6;
+    color: #FF922B !important;
+}
+
+.tag-nee {
+    background: #E6FCF5;
+    color: #0CA678 !important;
+}
+
+.project-header {
+    margin-bottom: 1.75rem;  /* Increased margin */
+    display: flex;
+    align-items: flex-start;  /* Align items to top */
+    gap: 1.25rem;
+}
+
+.project-icon {
+    width: 52px;      /* Slightly larger icon */
+    height: 52px;
+    border-radius: 12px;
+    background: #F8F9FA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;   /* Prevent icon from shrinking */
+}
+
+.project-icon i {
+    font-size: 1.75rem;  /* Larger icon */
+    color: var(--primary-color) !important;
+}
+
+.project-title {
+    font-size: 1.75rem;  /* Larger title */
+    font-weight: 600;
+    color: #2C3E50 !important;
+    margin: 0;
+    line-height: 1.4;
+    flex-grow: 1;     /* Allow title to take remaining space */
+}
+
+.project-description {
+    color: #64748B !important;
+    font-size: 1.125rem;  /* Larger description text */
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
+}
+
+.project-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));  /* Wider feature boxes */
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;        /* More space between icon and text */
+    padding: 1.125rem;  /* More padding */
+    background: #F8F9FA;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-2px);
+    background: #f0f2f5;
+}
+
+.feature i {
+    color: var(--primary-color) !important;
+    font-size: 1.125rem;  /* Larger feature icons */
+}
+
+.feature span {
+    color: #4A5568 !important;
+    font-size: 1rem;    /* Larger feature text */
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 2rem;  /* More padding */
+    background: var(--primary-color);
+    color: white !important;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.125rem;  /* Larger link text */
+    margin-top: auto;
+    transition: all 0.3s ease;
+    justify-content: center;
+    width: 100%;
+}
+
+.project-link:hover {
+    background: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+/* Adjust owl carousel container for wider slides */
+.owl-carousel {
+    max-width: 1400px;  /* Increased max-width */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Add more space between slides */
+.owl-carousel .owl-item {
+    padding: 0 15px;  /* Add padding between slides */
+}
+
+/* Make sure the navigation doesn't get cut off */
+.owl-nav {
+    margin-top: 2rem;
+}
