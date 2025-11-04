@@ -1,10 +1,14 @@
-.project-wrapper {
-    padding: 1.5rem;
-    max-width: 800px;  /* Significantly increased width */
-    margin: 0 auto;
+.project-carousel-detailed {
+    position: relative;
 }
 
-.project-card {
+.project-carousel-detailed .project-wrapper {
+    padding: 1.5rem;
+    margin: 0;
+    height: 100%;
+}
+
+.project-carousel-detailed .project-card {
     background: #ffffff;
     border-radius: 16px;
     overflow: hidden;
@@ -16,37 +20,37 @@
     width: 100%;
 }
 
-.project-card:hover {
+.project-carousel-detailed .project-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 15px 30px rgba(0,0,0,0.12);
 }
 
-.project-image {
+.project-carousel-detailed .project-image {
     position: relative;
     height: 200px;
     overflow: hidden;
 }
 
-.project-image img {
+.project-carousel-detailed .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-image img {
+.project-carousel-detailed .project-card:hover .project-image img {
     transform: scale(1.1);
 }
 
-.project-content {
-    padding: 2.5rem;  /* Increased padding */
+.project-carousel-detailed .project-content {
+    padding: 2.5rem;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     background: #ffffff;
 }
 
-.project-tags {
+.project-carousel-detailed .project-tags {
     display: flex;
     gap: 1rem;
     margin-bottom: 1.5rem;
@@ -54,7 +58,7 @@
     justify-content: flex-start;
 }
 
-.tag {
+.project-carousel-detailed .tag {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -65,28 +69,28 @@
     white-space: nowrap;
 }
 
-.tag i {
+.project-carousel-detailed .tag i {
     font-size: 0.875rem;
 }
 
-.tag-age {
+.project-carousel-detailed .tag-age {
     background: #FFF4E6;
     color: #FF922B !important;
 }
 
-.tag-nee {
+.project-carousel-detailed .tag-nee {
     background: #E6FCF5;
     color: #0CA678 !important;
 }
 
-.project-header {
+.project-carousel-detailed .project-header {
     margin-bottom: 2rem;
     display: flex;
     align-items: flex-start;
     gap: 1.5rem;
 }
 
-.project-icon {
+.project-carousel-detailed .project-icon {
     width: 48px;
     height: 48px;
     border-radius: 12px;
@@ -97,12 +101,12 @@
     flex-shrink: 0;
 }
 
-.project-icon i {
+.project-carousel-detailed .project-icon i {
     font-size: 1.5rem;
     color: var(--primary-color) !important;
 }
 
-.project-title {
+.project-carousel-detailed .project-title {
     font-size: 1.5rem;
     font-weight: 600;
     color: #2C3E50 !important;
@@ -111,7 +115,7 @@
     flex-grow: 1;
 }
 
-.project-description {
+.project-carousel-detailed .project-description {
     color: #64748B !important;
     font-size: 1rem;
     line-height: 1.7;
@@ -120,14 +124,14 @@
     max-width: 100%;
 }
 
-.project-features {
+.project-carousel-detailed .project-features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* Always show 3 columns */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
     margin-bottom: 2rem;
 }
 
-.feature {
+.project-carousel-detailed .feature {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -137,24 +141,24 @@
     transition: transform 0.3s ease;
 }
 
-.feature:hover {
+.project-carousel-detailed .feature:hover {
     transform: translateY(-2px);
     background: #f0f2f5;
 }
 
-.feature i {
+.project-carousel-detailed .feature i {
     color: var(--primary-color) !important;
     font-size: 1rem;
 }
 
-.feature span {
+.project-carousel-detailed .feature span {
     color: #4A5568 !important;
     font-size: 0.9375rem;
     font-weight: 500;
     line-height: 1.4;
 }
 
-.project-link {
+.project-carousel-detailed .project-link {
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
@@ -170,36 +174,91 @@
     width: 100%;
 }
 
-.project-link:hover {
+.project-carousel-detailed .project-link:hover {
     background: var(--dark-color);
     transform: translateY(-2px);
 }
 
-/* Adjust container width */
-.container-fluid {
-    max-width: 100%;  /* Use full width */
-    margin: 0 auto;
-    padding: 0 30px;
+.project-carousel-detailed .owl-stage {
+    display: flex;
 }
 
-/* Adjust carousel configuration */
-.owl-carousel {
-    margin: 0 -15px;
-}
-
-.owl-carousel .owl-item {
+.project-carousel-detailed .owl-item {
+    display: flex;
+    height: auto;
     padding: 0 15px;
 }
 
-/* Adjust items per view */
-@media (min-width: 992px) {
-    .owl-carousel .owl-stage {
-        display: flex;
-        justify-content: center;
+.project-carousel-detailed .project-card,
+.project-carousel-detailed .project-wrapper {
+    width: 100%;
+}
+
+.project-carousel-detailed .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.project-carousel-detailed .owl-nav button {
+    pointer-events: all;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--primary-color);
+    border: none;
+}
+
+.project-carousel-detailed .owl-nav button:hover {
+    background: var(--primary-color);
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.project-carousel-detailed .owl-nav button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 991.98px) {
+    .project-carousel-detailed .project-content {
+        padding: 2rem;
     }
-    
-    .owl-carousel .owl-item {
-        flex: 0 0 calc(50% - 30px);  /* Show 2 items per view */
-        max-width: calc(50% - 30px);
+
+    .project-carousel-detailed .project-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575.98px) {
+    .project-carousel-detailed .project-wrapper {
+        padding: 1rem;
+    }
+
+    .project-carousel-detailed .project-content {
+        padding: 1.75rem;
+    }
+
+    .project-carousel-detailed .project-features {
+        grid-template-columns: 1fr;
+    }
+
+    .project-carousel-detailed .owl-nav {
+        top: calc(100% + 10px);
+        transform: translateY(0);
+        justify-content: center;
+        gap: 1rem;
     }
 }
