@@ -28,8 +28,9 @@
 
 
     // PROJECT CAROUSEL
-    var owl = $("#project-slide");
-    owl.owlCarousel({
+    var projectCarousels = $(".project-carousel");
+    projectCarousels.each(function(){
+      $(this).owlCarousel({
         loop: true,
         margin: 30,
         nav: false,
@@ -53,7 +54,9 @@
                 margin: 30
             }
         }
-    });  });
+      });
+    });
+  });
 
 
   // Additional interactive features for EduEtapas: subscriptions, reviews, login demo
